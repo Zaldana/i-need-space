@@ -17,7 +17,7 @@ async function fetchNorad() {
     const lon = mapData.features[0].center[0];
     const lat = mapData.features[0].center[1];
 
-    const rawData = await fetch(`https://satellites.fly.dev/passes/${norad}?lat=${lat}&lon=${lon}&limit=1&days=15`);
+    const rawData = await fetch(`https://satellites.fly.dev/passes/${norad}?lat=${lat}&lon=${lon}&limit=1&days=15&visible_only=true`);
     const data = await rawData.json();
 
 
